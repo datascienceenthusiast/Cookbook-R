@@ -1,6 +1,7 @@
 # Only numeric fields can be entered in the neurelnet formula
 # Big data poses challenges as there may be large number of columns and 
 # it is tedious to write each column name in the code, hence the below function is a solution
+# it returns a formula string in the format ' y~ x1+x2+x3...+xn' and can be used directly in the neuralnet function
 
 # inputs : Y, data frame
 # output: formula string
