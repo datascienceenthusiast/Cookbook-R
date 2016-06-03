@@ -6,7 +6,7 @@
 # inputs : Y, data frame
 # output: formula string
 
-neuralnet_formula <- function(y, df){
+neuralnet_formula <- function(Y, df){
 	num_col <- colnames(df[,sapply(df, is.numeric)])
  	num_col <- sapply(num_col, function(x) paste(x, "+"))
   	num_col <- paste(num_col, collapse = " ")
