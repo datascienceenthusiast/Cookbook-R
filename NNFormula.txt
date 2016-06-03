@@ -1,0 +1,16 @@
+# Only numeric fields can be entered in the neurelnet formula
+# Big data poses challenges as there may be large number of columns and 
+# it is tedious to write each column name in the code, hence the below function is a solution
+
+# inputs : Y, data frame
+# output: formula string
+
+neuralnet_formula <- function(y, df){
+	num_col <- colnames(df[,sapply(df, is.numeric)])
+ 	num_col <- sapply(num_col, function(x) paste(x, "+"))
+  	num_col <- paste(num_col, collapse = " ")
+  	num_col <- substr(num_col, 1, nchar(num_col)-1)
+ 	formula <- paste(Y,"~",collapse = "")
+  	formula <- paste(formula, num_col, collapse = " ")
+	return(formula)
+}
