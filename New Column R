@@ -1,0 +1,8 @@
+# Add new columns in R when number of columns to be added is unknown and depends on some index
+
+namevector <- c()
+  for (j in 1:length(index)){
+    namevector <- c(namevector,paste(index[j],"_",j,sep=""))
+  }
+  
+results[,namevector] <- NA
