@@ -1,0 +1,4 @@
+# Convert all NAs to zeros in a dataframe
+# We do not need to usee apply function, just use the same method as for a vector
+
+x[is.na(x)] <- 0
